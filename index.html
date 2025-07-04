@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A resume website showcasing my web development projects, certifications, skills, and latest learnings in ai and web development. Explore my experience and recent achievements.">
+    <meta name="author" content="Dharineesh K S">
+    <meta name="keywords" content="Dharineesh K S, dharineesh, web developer, portfolio, web development, certifications, data analytics, skills, projects, responsive design, HTML, CSS, JavaScript, GitHub, LinkedIn, resume, latest learning, completed learning">
+    <title>Dharineesh's Resume</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./scrollBarBrowser.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-163DJ7KYYW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-163DJ7KYYW');
+</script>
+<body>
+    <div id="scroll-progress-bar"></div>
+    <!-- Header Section -->
+    <div class="top-header">
+        <div class="time-display"><span id="time-display" onload="updateTime();">Time</span></div>
+        <!-- Music Player -->
+        <audio id="background-music" loop autoplay muted>
+            <source src="./assests/music/new-audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Music Control Button -->
+        <button id="music-toggle" class="music-btn" onclick="toggleMusic()">Play Music</button>
+        <span id="modeType" style="margin-right: 8px;" >Light-Mode</span>
+        <div class="switch-container">
+            <label class="switch">
+                <input type="checkbox" id="modeToggle" onclick="changeText()">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <header>
+        
+        <div class="header-text">Dharineesh's Resume</div>   
+    </header>
+    <!-- Navigation Section -->
+    <nav>
+        <ul class="nav-links">
+            <li>
+                <a href="#about">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-5 w-5 text-gray-500">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                About
+                </a>
+            </li>
+            <li>
+                <a href="#skills">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-5 w-5 text-gray-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                    Skills
+                </a>
+            </li>
+            <li>
+                <a href="#education">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg>
+                    Education
+                </a>
+            </li>
+            <li>
+                <a href="#experience">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-5 w-5 text-gray-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Experience
+                </a>
+            </li>
+         
+            <li>
+                <a href="#products">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-[22px] h-[22px] text-gray-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3" />
+                    </svg>
+                    Projects
+                </a>
+            </li>
+          
+            <li>
+                <a href="#contact">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                    </svg>
+                    Contact
+                </a>
+            </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <h2 class="h2">About Me</h2>
+        <div class="about-content">
+            
+            <div class="about-text">
+                <p>
+                    With a B.Tech degree and a strong foundation in HTML, CSS, JavaScript, Bootstrap, and Python, I focus on building responsive, user-friendly websites with clean design and functionality. My projects include a modern resume site, a restaurant website, a QR code generator, and a Pomodoro timer. Continuously learning and adapting to new technologies, I am passionate about contributing to innovative web and AI-based solutions.
+                </p>
+            </div>
+        </div>
+        
+        <blockquote class="quote">"The only way to do great work is to love what you do."</blockquote>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="h2">Skills</h2>
+        <div class="skill-list">
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">Angular</div>
+            <div class="skill-item">Bootstrap</div>
+            <div class="skill-item">MySQL</div>
+            <div class="skill-item">Python</div>
+            <div class="skill-item">Git</div>
+            <div class="skill-item">GitHub</div>
+            <div class="skill-item">Wix</div>
+            <div class="skill-item">Canva</div>
+            <div class="skill-item">Graphic Design</div>
+            <div class="skill-item">Figma</div>
+            <!-- <div class="skill-item">Team Work</div>
+            <div class="skill-item">Attention to Detail</div>
+            <div class="skill-item">Adaptability</div>
+            <div class="skill-item">Flexibility</div>
+            <div class="skill-item">Problem solving</div> -->
+        </div>
+        <blockquote class="quote">"Skill is the unified force of experience, intellect, and passion."</blockquote>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <h2 class="h2">Education</h2>
+        <div class="education-list">
+
+            <div class="education-item">
+                <h3 class="h3">Bachelor of Technology in Bioinformatics</h3>
+                <p><strong>University:</strong> SASTRA University</p>
+                <p><strong>Year:</strong> 2019 - 2023</p>
+                <p><strong>Location:</strong> Tirumalaisamudram, Thanjavur, India</p>
+                <p><strong>Achievements:</strong> Graduated with First Class.</p>
+            </div>
+        </div>
+        <blockquote class="quote">"Education is the passport to the future, for tomorrow belongs to those who prepare for it today."</blockquote>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <h2 class="h2">Experience</h2>
+        <div class="experience-list">
+            <div class="experience-item">
+                <h3 class="h3">FreeLance Web Developer</h3>
+                <p><strong>Duration:</strong> July 2023 - Present</p>
+                <p><strong>Description</strong> Developed a range of web projects, including responsive websites and a feature-rich restaurant website, to enhance coding skills and remain updated with industry best practices. Utilized front-end technologies such as HTML, CSS, JavaScript, and Bootstrap to create user-friendly and visually appealing interfaces. Integrated new tools and technologies like EmailJS for form handling and JSON for data management, while deploying projects on GitHub Pages. Focused on optimizing websites for performance across various devices, adhering to responsive design standards, and incorporating animations and interactive elements. Continuously updated a personal portfolio to showcase projects and reflect ongoing growth in web development.</p>
+            </div>
+            
+        </div>
+        <blockquote class="quote">"Success is not the key to happiness. Happiness is the key to success."</blockquote>
+    </section>
+    <section id="products" class="section">
+        <!-- <h2 class="h2">My Products</h2> -->
+        <h2 class="h2">My Projects</h2>
+        <div class="product-container">
+            <div class="card">
+                <img src="./assests/dopomodoro.png" alt="dopomodoro web app img">
+                <h2 style="text-align: center;">DoPomodoro</h2>
+                <!-- <p>The DoPomodoro Web App is a productivity tool designed to help users stay focused and manage time effectively. It features customizable Pomodoro, short break, and long break timers, a dark/light mode toggle, motivational quotes, and a responsive design for seamless use on any device.</p> -->
+                <p class="project-details-products"><strong>Description:</strong> A responsive Pomodoro timer web app to boost productivity through structured focus and break sessions.</p>
+                <p class="project-details-products"><strong>Tech Used:</strong> Built with HTML, CSS, and JavaScript.</p>
+                <p class="project-details-products"><strong>Features:</strong> Customizable work/break durations, dark/light mode, motivational quotes, and audio alerts.</p>
+                <p class="project-details-products"><strong>Deployment:</strong> Hosted on GitHub Pages for easy access.</p>
+                <p class="project-view-btn"><a href="https://dharineesh17.github.io/dopomodoro/" target="_blank" rel="noopener noreferrer" ><button>View App</button></a></p>
+            </div>
+            <div class="card">
+                <img src="./assests/qbcode.png" alt="QB Code web app img">
+                <!-- <h2>QB Code</h2>
+                <p>Create customized QR codes with custom colors, logo integration, and real-time preview. Download in various sizes for a professional and branded touch!</p>
+                <a href="https://dharineesh17.github.io/qbcode/" target="_blank" rel="noopener noreferrer"><button>View App</button></a> -->
+                <h2 style="text-align: center;">QB Code</h2>
+                <!-- <p>The DoPomodoro Web App is a productivity tool designed to help users stay focused and manage time effectively. It features customizable Pomodoro, short break, and long break timers, a dark/light mode toggle, motivational quotes, and a responsive design for seamless use on any device.</p> -->
+                <p class="project-details-products"><strong>Description:</strong> A web app to generate customizable QR codes and barcodes with color, logo, and format options.</p>
+                <p class="project-details-products"><strong>Tech Used:</strong> Built using HTML, CSS, JavaScript, QRCode.js, JsBarcode, and Html5-QRCode.</p>
+                <p class="project-details-products"><strong>Features:</strong> Supports text, contact, event, and location QR types; color picker; logo upload; live preview; download options.</p>
+                <p class="project-details-products"><strong>Deployment:</strong> Hosted on GitHub Pages for instant and free access.</p>
+                <p class="project-view-btn"><a href="https://dharineesh17.github.io/qbcode/" target="_blank" rel="noopener noreferrer" ><button>View App</button></a></p>
+            </div>
+            <div class="card">
+                <img src="./assests/resume.png" alt="Resume web app img">
+                <h2 style="text-align: center;">Resume Web App</h2>
+                <p class="project-details-products"><strong>Description:</strong> A personal resume website showcasing projects, technical skills, and professional experience with a clean and modern user interface. </p>
+                <p class="project-details-products"><strong>Tech Used:</strong> Built using HTML5, CSS3, JavaScript</p>
+                <p class="project-details-products"><strong>Features:</strong> Responsive resume website with light/dark mode, smooth animations, mobile-friendly design, project showcase, live deployment, and an integrated contact form.</p>
+                <p class="project-details-products"><strong>Deployment:</strong> Live on GitHub Pages for easy public access and sharing.</p>
+                <p class="project-view-btn"><a href="https://dharineesh17.github.io/resume/" target="_blank" rel="noopener noreferrer" ><button>View App</button></a></p>
+            </div>
+            <div class="card">
+                <img src="./assests/restaurant1.png" alt="Restaurant web app img">
+                <h2 style="text-align: center;">Restaurant Web App</h2>
+                <p class="project-details-products"><strong>Description:</strong> A responsive and visually engaging restaurant website for showcasing menu items and enhancing user interaction. </p>
+                <p class="project-details-products"><strong>Tech Used:</strong> Built with HTML5, CSS3, Bootstrap 5, JavaScript, and integrated with EmailJS.</p>
+                <p class="project-details-products"><strong>Features:</strong> Interactive menu, responsive layout, marquee updates, contact form, and elegant UI/UX.</p>
+                <p class="project-details-products"><strong>Deployment:</strong> Live on GitHub Pages for fast and free hosting.</p>
+                <p class="project-view-btn"><a href="https://dharineesh17.github.io/srirangaatiffenstall/" target="_blank" rel="noopener noreferrer" ><button>View App</button></a></p>
+            </div>
+            <div class="card">
+                <img src="./assests/task.png" alt="Task web app img">
+                <h2 style="text-align: center;">Task App</h2>
+                <p class="project-details-products"><strong>Description:</strong> Developed a user-friendly to-do list application to manage tasks efficiently.</p>
+                <p class="project-details-products"><strong>Tech Used:</strong> HTML, CSS, JavaScript.</p>
+                <p class="project-details-products"><strong>Features:</strong>  Add, delete, and mark tasks as complete; responsive design for cross-device compatibility.</p>
+                <p class="project-details-products"><strong>Deployment:</strong> Deployed on GitHub Pages.</p>
+                <p class="project-details-products"><strong>Learning Source:</strong> IBM Skill Build program.</p>
+                <p class="project-view-btn"><a href="https://dharineesh17.github.io/TodoListApp/" target="_blank" rel="noopener noreferrer" ><button>View App</button></a></p>
+            </div>
+            <div class="card">
+                <img src="./assests/notes.png" alt="Notes web app img">
+                <h2 style="text-align: center;">Notes App</h2>
+                <p class="project-details-products"><strong>Description:</strong>  Developed a simple and intuitive notes application for quick and organized note-taking.</p>
+                <p class="project-details-products"><strong>Tech Used:</strong> HTML, CSS, JavaScript, and Angular.</p>
+                <p class="project-details-products"><strong>Features:</strong> Create, edit, delete notes; responsive design for multiple devices.</p>
+                <p class="project-details-products"><strong>Learning Source:</strong> SoloLearn program.</p>
+            </div>
+        </div>
+        <blockquote class="quote">"The secret of getting ahead is getting started."</blockquote>
+    </section>
+
+    
+
+    <!-- Certifications section -->
+    <section id="certification" class="section">
+        <h2 class="h2">Certifications</h2>
+        <div class="certification-list">
+            <div class="certification-item">
+                <h3 class="h3">Generative AI in practice</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CC-DYSCVGXQ" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>Generative AI, Artificial Intelligence, Prompt Engineering </p>
+                <p><strong>Date:</strong> Feb 2025</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">AI in Data Analytics</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CC-AFPH6H3N" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>Prompt Engineering, Data Analytics <p>
+                <p><strong>Date:</strong> Feb 2025</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">SEO with AI</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CC-1OQHTBJU" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>SEO, Prompt Engineering</p>
+                <p><strong>Date:</strong> Jan 2025</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Prompt Engineering</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CC-QZOQO87B" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>Prompt Engineering, Artificial Intelligence</p>
+                <p><strong>Date:</strong> Jan 2025</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Introduction to LLMs</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CC-Q1LYGNN0" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong> Generative AI, Artificial Intelligence, LLM</p>
+                <p><strong>Date:</strong> Jan 2025</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Artificial Intelligence Fundamentals</h3>
+                <p><strong>Issuing Organization: </strong>IBM SkillBuild</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.credly.com/badges/5f436f01-ff39-4400-88fb-d576e9cf1189/linked_in_profile" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>AI, ML, NLP</p>
+                <p><strong>Date:</strong> Dec 2024</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Graphic Design Essentials</h3>
+                <p><strong>Issuing Organization: </strong>Canva</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://canva.com/designschool/certification-award/a0738cf0-f4ac-49f9-91a2-ab3f2ab94052" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>Canva, Graphic Design</p>
+                <p><strong>Date:</strong> Dec 2024</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Canva Essentials</h3>
+                <p><strong>Issuing Organization: </strong>Canva</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://canva.com/designschool/certification-award/a99e8dba-ffea-4b7d-a7f2-9075faacd373" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>Canva</p>
+                <p><strong>Date:</strong> Dec 2024</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">AI for Beginners</h3>
+                <p><strong>Issuing Organization: </strong>HP Life</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://drive.google.com/file/d/19xUrFwSmkCtxQiNg8Gv_XUgvAoCCOONu/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>Artificial Intelligence</p>
+                <p><strong>Date:</strong> Nov 2024</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">SQL</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CC-DLKOZDYX" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>MySQL</p>
+                <p><strong>Date:</strong> Oct 2024</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">National Qualifier Test - IT</h3>
+                <p><strong>Issuing Organization: </strong>TCS ION</p>
+                <p><strong>Skills: </strong>Aptitude, Python</p>
+                <p><strong>Date: </strong> Jul 2024</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Angular NestJS</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CC-3Z95KNGA" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>Angular, HTML, CSS, JS</p>
+                <p><strong>Date:</strong> Jun 2024</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Web Development Fundamentals</h3>
+                <p><strong>Issuing Organization: </strong>IBM SkillBuild</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.credly.com/badges/f52c0b3c-d0c2-4f98-9962-d881f1508d70/linked_in_profile" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>HTML, CSS, JS</p>
+                <p><strong>Date:</strong> May 2024</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Angular</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CC-YHK3DKWU" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>Angular, HTML, CSS, JS</p>
+                <p><strong>Date:</strong> Feb 2024</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Java</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CC-URAHTHYQ" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>Java</p>
+                <p><strong>Date:</strong> Jan 2024</p>
+            </div> 
+            <div class="certification-item">
+                <h3 class="h3">Programming, Data Structures and Algorithms Using Python</h3>
+                <p><strong>Issuing Organization: </strong>Indian Institute of Technology Madras</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://drive.google.com/file/d/19CIMGsPIxPAR6L8s61SOT3NLXbBBbUrU/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>Python, DSA</p>
+                <p><strong>Date:</strong> Sep 2023</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Intelligent Systems for Molecular Biology/European Conference on Computational Biology (ISMB/ECCB) 2023</h3>
+                <p><strong>Issuing Organization: </strong>ISCB - International Society for Computational Biology</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://drive.google.com/file/d/1dj4taerwoUTRIfIejHpgPVP2UpGPzkf6/view" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.youtube.com/watch?v=WZSEj2si1ws" target="_blank" rel="noopener noreferrer">Click to View Video</a></p>
+                <p><strong>Skills: </strong> Video Editing, Presentation Skills, Bioinformatics, Poster Design</p>
+                <p><strong>Date:</strong> Jul 2023</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Responsive Web Design</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CT-3MGNVFLC" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>HTML, CSS</p>
+                <p><strong>Date:</strong> Sep 2023</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">JavaScript</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CT-8M1W8SAJ" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>JavaScript</p>
+                <p><strong>Date:</strong> Dec 2021</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Cascading Style Sheets</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CT-0VZSYASX" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>CSS</p>
+                <p><strong>Date:</strong> Nov 2021</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Hypertext Markup Language</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CT-BFECT3LS" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>HTML</p>
+                <p><strong>Date:</strong> Nov 2021</p>
+            </div>
+            <div class="certification-item">
+                <h3 class="h3">Python Core</h3>
+                <p><strong>Issuing Organization: </strong>SoloLearn</p>
+                <p><strong>Link: </strong><a class="certificationLink" href="https://www.sololearn.com/certificates/CT-XXXBGPI4" target="_blank" rel="noopener noreferrer">Click to View Credentials</a></p>
+                <p><strong>Skills: </strong>Python</p>
+                <p><strong>Date:</strong> May 2021</p>
+            </div>
+        </div>
+        <blockquote class="quote">"An investment in knowledge always pays the best interest."</blockquote>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="contactH2">Get in Touch</h2>
+            <blockquote class="contactQuote">"Where creativity meets code. Find me here."</blockquote>
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <div>
+                    <h4>Address</h4>
+                    <p>TN, India</p>
+                </div>
+                <div>
+                    <h4>Phone</h4>
+                    <p>+91 9x8xxx7x1x</p>
+                </div>
+                <div>
+                    <h4>Email</h4>
+                    <p><a href="mailto:">email@email.com</a></p>
+                </div>
+            </div>
+            <!-- Google Form for Contact -->
+            <div class="google-form">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdiNJqbeZIWElQD5JSmN2_snmZrdAMgKAuhdkzc34e1mXqCCQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            </div>
+            <blockquote class="quote">"Let's connect and create something amazing."</blockquote>
+        </div>
+    </section>
+
+    <footer>
+        <div class="btn-mobile">   
+        <p>&COPY; <span id="yearID"></span> Dharineesh.  All rights reserved.</p>
+        <p>Website Version: <span id="version"></span> | Last Updated: <span id="lastUpdated"></span></p>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="./audio.js"></script>
+    <script src="./disable.js"></script>
+
+</body>
+</html>
