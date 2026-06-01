@@ -1,5 +1,12 @@
 /* Author Name: Dharineesh K S; */
 /* Global Style Start */
+/* 8a2be2 252027 */
+:root {
+    --primary-color: #182A7F; 
+    --secondary-color: #00674F;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,17 +14,17 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 .h2 {
     text-align: center;
     font-size: 2rem;
-    color: #8a2be2;
+    color: var(--primary-color);
     margin-bottom: 2rem;
 }
 .h3 {
-    color: #8a2be2;
+    color: var(--primary-color);
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
@@ -25,7 +32,7 @@ body {
     font-style: italic;
     text-align: center;
     margin-top: 2rem;
-    color: #252027;
+    color: var(--secondary-color);
     font-size: 1.2rem;
 }
 /* scroll progress bar Styles */
@@ -34,7 +41,7 @@ body {
     top: 0;
     left: 0;
     height: 5px;
-    background-color: #8a2be2;
+    background-color: var(--secondary-color);
     z-index: 1000;
 }
 /* Section Styles */
@@ -71,13 +78,13 @@ body {
     gap: 2rem;
 }
 .experience-item, .education-item, .certification-item {
-    border-left: 4px solid #8a2be2;
+    border-left: 4px solid var(--primary-color);
     padding-left: 1.5rem;
     transition: background-color 0.3s ease;
     text-align: justify;
 }
 .experience-item:hover, .education-item:hover, .certification-item:hover {
-    background-color: #f0e6ff;
+    background-color: #e6f6ff;
 }
 .certification-item {
     text-align: left;
@@ -91,7 +98,7 @@ body {
     font-size: smaller;
     margin-right: 5px;
     padding: 5px;
-    background-color: #252027;
+    background-color: var(--secondary-color);
     border-radius: 5px;
     color: white;
 }
@@ -105,7 +112,7 @@ header {
     display: flex;
     justify-content:left;
     align-items: center;
-    background-color: #252027;
+    background-color: var(--primary-color);
     padding: 15px 0px 0px 5px;
     color: #fff;
     text-align: center;
@@ -125,7 +132,7 @@ header div {
     /* padding-left: 5px; */
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #8a2be2;
+    border: 2px solid var(--primary-color);
 }
 /* Dark Mode Styling Start*/
 body.dark-mode {
@@ -153,7 +160,7 @@ body.dark-mode .contact-details a {
     color: #f4f4f4;
 }
 body.dark-mode header {
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
 }
 body.dark-mode .logo {
     /* padding-left: 5px; */
@@ -162,30 +169,30 @@ body.dark-mode .logo {
     border: 2px solid white;
 }
 body.dark-mode nav ul li a:hover {
-    background-color: #252027;
+    background-color: var(--secondary-color);
     border-radius: 5px;
     transform: scale(1.20);
 }
 body.dark-mode .slider::before {
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
 }
 body.dark-mode .scrolling-list a {
     color: #f4f4f4;
 }
 body.dark-mode nav {
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
 }
 body.dark-mode .scrollText {
     color: #f4f4f4;
 }
 body.dark-mode .btn {
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
 }
 body.dark-mode .music-btn, body.dark-mode .time-display {
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
 }
 body.dark-mode .btn:hover {
-    background-color: #252027;
+    background-color: var(--secondary-color);
 }
 body.dark-mode .btn::after {
     background-color: rgba(255, 255, 255, 0.1);
@@ -197,13 +204,13 @@ body.dark-mode .h3 {
     color: #f4f4f4;
 }
 body.dark-mode .experience-item:hover {
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
 }
 body.dark-mode .education-item:hover {
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
 }
 body.dark-mode .certification-item:hover {
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
 }
 body.dark-mode .certificationLink{
     color: #f4f4f4;
@@ -215,7 +222,7 @@ body.dark-mode .project:hover {
     color: white;
 }
 body.dark-mode footer{
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
 }
 body.dark-mode .btn-li:hover {
     background-color: #0077B5;
@@ -225,6 +232,9 @@ body.dark-mode .btn-hr:hover {
 }
 body.dark-mode .btn-yt:hover {
     background-color: #ff0000;
+}
+body.dark-mode .contactH2 {
+    color: white;
 }
 
 
@@ -271,13 +281,13 @@ body.dark-mode .btn-bl:hover {
     width:15px;
     left: 4px;
     bottom: 4px;
-    background-color: #252027;
+    background-color: var(--secondary-color);
     transition: 0.4s;
     border-radius: 50%;
 }
 /* When checked, move the slider */
 input:checked + .slider {
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
 }
 input:checked + .slider:before {
     transform: translateX(10px);
@@ -293,7 +303,7 @@ nav {
     display: flex;
     align-items: center;
     color: #fff;
-    background-color: #252027;
+    background-color: var(--primary-color);
     font-family: 'Poppins', sans-serif;
     justify-content: center;
     padding-bottom: 10px;
@@ -313,7 +323,7 @@ nav ul li a {
     align-items: center;
 }
 nav ul li a:hover {
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
     border-radius: 5px;
     transform: scale(1.30);
     padding: 1px 5px 1px 5px;
@@ -360,7 +370,7 @@ svg {
         top: 60px; /* Adjust based on header height */
         left: 0;
         right: 0;
-        background-color: #252027;
+        background-color: var(--secondary-color);
         flex-direction: column;
         text-align: center;
         gap: 2;
@@ -369,7 +379,7 @@ svg {
         z-index: 2;
     }
     body.dark-mode .nav-links {
-        background-color: #8a2be2;
+        background-color: var(--primary-color);
     }
     .nav-links.active {
         display: flex; /* Show links when active */
@@ -396,7 +406,7 @@ svg {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    /* border: 2px solid #8a2be2; */
+    /* border: 2px solid var(--primary-color); */
 }
 .about-text {
     text-align: justify;
@@ -425,7 +435,7 @@ svg {
     display: inline-flex;
     flex-direction: row;
     padding: 5px;
-    background-color: #252027;
+    background-color: var(--secondary-color);
     color: rgb(255, 255, 255);
     border-radius: 5px;
     font-size: 16px;
@@ -448,11 +458,11 @@ svg {
 
 
 .btn:hover {
-    /* background-color: #8a2be2; */
+    /* background-color: var(--primary-color); */
     transform: scale(1.05);
 }
 .btn:hover {
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
 }
 .btn-li:hover {
     background-color: #0077B5;
@@ -487,7 +497,7 @@ svg {
 .music-btn {
     margin-right: 8px;
     padding: 5px;
-    background-color: #252027;
+    background-color: var(--secondary-color);
     color: rgb(255, 255, 255);
     border-radius: 5px;
     align-items: center;
@@ -496,7 +506,7 @@ svg {
 /* Scroll Style Start */
 .scrollText {
     text-align: center;
-    color: #8a2be2;
+    color: var(--primary-color);
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
@@ -520,12 +530,12 @@ svg {
     margin: 10px 0;
 }
 .scrolling-list a {
-    color: #252027;
+    color: var(--secondary-color);
     text-decoration: none;
 }
 .scrolling-list a:hover {
     text-decoration: underline;
-    color: #8a2be2;
+    color: var(--primary-color);
 }
 @keyframes scroll-up {
     0% {
@@ -547,7 +557,7 @@ svg {
     padding: 20px;
 }
 .skill-item {
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
     color: white;
     padding: 10px;
     border-radius: 50px;  /* Gives a more 'cloud' look */
@@ -558,7 +568,8 @@ svg {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .skill-item:hover {
-    background-color: #6a1ab1;
+    /* #6a1ab1 */
+    background-color: var(--secondary-color);
     cursor: pointer;
     transform: scale(1.1);
 }
@@ -620,7 +631,7 @@ svg {
 
 .card h2 {
     margin: 10px 0;
-    color: #8a2be2;
+    color: var(--primary-color);
 }
 
 .card p {
@@ -638,7 +649,7 @@ svg {
 }
 
 .card button:hover {
-    background: #8a2be2;
+    background: var(--primary-color);
 }
 /* Product Section Style end */
 
@@ -661,7 +672,7 @@ svg {
 }
 .project:hover {
     transform: scale(1.05);
-    background-color: #8a2be2;
+    background-color: var(--primary-color);
     color: white;
 }
 .projectH3{
@@ -700,13 +711,14 @@ svg {
 }
 .close:hover,
 .close:focus {
-    color: rgb(138, 43, 226);
+    /* color: rgb(138, 43, 226); */
+    color: var(--primary-color);
     text-decoration: none;
 }
 .modal-header {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #252027;
+    color: var(--secondary-color);
 }
 .modal-body {
     color: #555;
@@ -787,7 +799,7 @@ svg {
     cursor: pointer;
 }
 .gallery-close-btn:hover {
-    color: #8a2be2;
+    color: var(--primary-color);
 }
 .galleryModal-content {
     margin: auto;
@@ -806,7 +818,7 @@ svg {
     text-decoration: none;
 }
 .galleryModal-link a:hover {
-    color: #8a2be2;
+    color: var(--primary-color);
     text-decoration: underline;
 }
 .galleryModal-caption {
@@ -864,12 +876,12 @@ svg {
 .contactH2 {
     text-align: center;
     font-size: 2rem;
-    color: #8a2be2;
+    color: var(--primary-color);
 }
 .contactQuote {
     font-style: italic;
     text-align: center;
-    color: #252027;
+    color: var(--secondary-color);
     font-size: 1.2rem;
 }
 .contact-details {
@@ -885,15 +897,15 @@ svg {
     margin: 15px;
 }
 .contact-details h4 {
-    color: #8a2be2;
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 .contact-details p {
-    color: #252027;
+    color: var(--secondary-color);
 }
 .contact-details a {
     text-decoration: none;
-    color: #252027;
+    color: var(--secondary-color);
 }
 /* Google Form */
 
@@ -917,7 +929,7 @@ svg {
 /* Contact Section End*/
 /* Footer Styles Start*/
 footer {
-    background-color: #252027;
+    background-color: var(--secondary-color);
     color: white;
     padding: 10px;
     text-align: center;

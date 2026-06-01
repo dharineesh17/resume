@@ -11,6 +11,10 @@
 
 ## Version Updates
 
+### Version 5.0
+- Update Theme and Latest Portfolio
+- Update README File
+
 ### Version 4.0
 - Update Certification Section
 - Remove Link Buttons: shutterstock, pinterest

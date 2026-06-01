@@ -1,7 +1,13 @@
 /* Firefox */
+:root {
+    --primary-color: #182A7F; 
+    --secondary-color: #00674F;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+}
 body {
     scrollbar-width: thin; 
-    scrollbar-color: #8a2be2 #252027;  
+    scrollbar-color: var(--primary-color) var(--secondary-color);  
 }
 /* WebKit Browsers (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
@@ -14,10 +20,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8a2be2; /* Scrollbar color */
+  background: var(--primary-color); /* Scrollbar color */
   border-radius: 3px; 
 }
 ::-webkit-scrollbar-thumb:hover {
-  /* background: #252027;  */
-  background-color: rgba(138,43,226, 0.8);
+  /* background: var(--secondary-color);  */
+  background-color: rgba(0, 103, 79, 0.8);
 }
