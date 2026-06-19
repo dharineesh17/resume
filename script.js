@@ -195,7 +195,7 @@ window.addEventListener('scroll', function () {
 
 // footer Script Start
 var websiteVersion = "5.0";
-var lastUpdated = new Date(2026, 5, 1); //
+var lastUpdated = new Date(2026, 5, 19); //
 document.getElementById("version").textContent = websiteVersion;
 document.getElementById("lastUpdated").textContent = lastUpdated.toLocaleString('en-US', {
   year: 'numeric',
